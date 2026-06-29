@@ -35,7 +35,7 @@
   border-bottom: 1px solid var(--line);
 }
 .comp-row:last-child { border-bottom: none; }
-.comp-row span { padding: var(--sp-5); font-size: var(--fs-sm); }
+.comp-row span { padding: var(--sp-5); font-size: var(--fs-sm); display: flex; align-items: center; }
 .comp-head { background: var(--panel); font-family: var(--font-mono); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.06em; color: var(--ivory-dim); }
 .comp-row:not(.comp-head) { background: var(--navy); }
 .comp-row span:first-child { color: var(--ivory); font-weight: 500; }
