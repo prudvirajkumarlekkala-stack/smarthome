@@ -54,7 +54,7 @@
 .newsletter-inner { display: grid; grid-template-columns: 1fr auto; gap: var(--sp-6); align-items: center; }
 .newsletter-inner h2 { font-size: var(--fs-xl); }
 .newsletter-inner p { color: var(--ivory-dim); margin-top: var(--sp-2); }
-.newsletter-form { display: flex; gap: var(--sp-3); }
+.newsletter-form { display: flex; align-items: center; gap: var(--sp-3); }
 .newsletter-form input {
   background: var(--panel); border: 1px solid var(--line); color: var(--ivory);
   border-radius: 999px; padding: 0.85rem 1.3rem; font-size: var(--fs-sm); min-width: 240px;
@@ -64,6 +64,7 @@
 @media (max-width: 800px) {
   .newsletter-inner { grid-template-columns: 1fr; }
   .newsletter-form { flex-direction: column; }
+  .newsletter-form .btn { width: 100%; }
   .newsletter-form input { min-width: 0; }
 }
 

@@ -3,7 +3,7 @@
    =========================================================== */
 .auth-body { min-height: 100vh; display: flex; flex-direction: column; }
 .auth-header { position: static; background: var(--navy); }
-.auth-header .nav { justify-content: space-between; }
+.auth-header .nav { justify-content: space-between; align-items: center; }
 
 .auth-main { flex: 1; }
 .auth-grid {
@@ -77,4 +77,9 @@
   .auth-grid, .auth-grid-reverse { grid-template-columns: 1fr; direction: ltr; }
   .auth-art { min-height: 220px; }
   .auth-art-text { padding: var(--sp-6); }
+}
+
+@media (max-width: 640px) {
+  .auth-header .nav { flex-wrap: wrap; row-gap: var(--sp-3); }
+  .auth-header .btn { margin-left: auto; }
 }

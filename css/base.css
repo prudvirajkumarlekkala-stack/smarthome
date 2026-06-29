@@ -150,24 +150,28 @@ p { margin: 0; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--sp-4);
   padding: var(--sp-4) 0;
 }
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: var(--sp-3);
+  gap: var(--sp-2);
   font-family: var(--font-display);
   font-size: var(--fs-md);
   font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
   color: var(--ivory);
 }
-.brand img { width: 32px; height: 32px; border-radius: 8px; }
+.brand img { width: 32px; height: 32px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
 .nav-links {
   display: flex;
   align-items: center;
   gap: var(--sp-6);
   font-size: var(--fs-sm);
 }
+.nav-links li { display: flex; align-items: center; }
 .nav-links a {
   color: var(--ivory-dim);
   position: relative;
@@ -181,7 +185,7 @@ p { margin: 0; }
   height: 2px; background: var(--amber-light);
   border-radius: 2px;
 }
-.nav-actions { display: flex; align-items: center; gap: var(--sp-3); }
+.nav-actions { display: flex; align-items: center; gap: var(--sp-3); flex-shrink: 0; }
 .nav-toggle {
   display: none;
   background: none; border: 1px solid var(--line); border-radius: 8px;
@@ -190,8 +194,9 @@ p { margin: 0; }
 }
 
 @media (max-width: 900px) {
-  .nav-links { position: fixed; top: 64px; right: 0; bottom: 0; left: 0; background: var(--navy-2);
+  .nav-links { position: fixed; top: 72px; right: 0; bottom: 0; left: 0; background: var(--navy-2);
     flex-direction: column; justify-content: flex-start; padding: var(--sp-7) var(--sp-6); gap: var(--sp-5);
+    align-items: flex-start;
     transform: translateY(-110%); transition: transform 0.35s var(--ease); border-top: 1px solid var(--line);
   }
   .nav-links.open { transform: translateY(0); }
@@ -199,6 +204,19 @@ p { margin: 0; }
   .nav-toggle { display: flex; }
   .nav-actions .btn-ghost { display: none; }
 }
+
+/* shared page header */
+.page-head {
+  padding: var(--sp-8) 0 var(--sp-6);
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--navy-2), var(--navy));
+}
+.page-head h1 {
+  font-size: clamp(2.2rem, 5vw, var(--fs-3xl));
+  margin-top: var(--sp-3);
+  max-width: 600px;
+}
+.page-head p { margin-top: var(--sp-4); color: var(--ivory-dim); max-width: 480px; font-size: var(--fs-md); }
 
 /* ===========================================================
    FOOTER
