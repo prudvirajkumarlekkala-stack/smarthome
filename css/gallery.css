@@ -1,20 +1,10 @@
 /* ===========================================================
    GALLERY PAGE
    =========================================================== */
-.page-head {
-  padding: var(--sp-8) 0 var(--sp-6);
-  border-bottom: 1px solid var(--line);
-  background: linear-gradient(180deg, var(--navy-2), var(--navy));
-}
-.page-head h1 {
-  font-size: clamp(2.2rem, 5vw, var(--fs-3xl));
-  margin-top: var(--sp-3);
-  max-width: 600px;
-}
-.page-head p { margin-top: var(--sp-4); color: var(--ivory-dim); max-width: 480px; font-size: var(--fs-md); }
 
 .filter-row {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: var(--sp-3);
   margin-bottom: var(--sp-7);
