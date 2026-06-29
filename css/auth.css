@@ -35,7 +35,7 @@
 .field input {
   background: var(--panel); border: 1px solid var(--line); color: var(--ivory);
   border-radius: var(--radius-sm); padding: 0.8rem 1rem; font-size: var(--fs-base); font-family: var(--font-body);
-  width: 100%;
+  width: 100%; line-height: 1;
 }
 .field input:focus { outline: none; border-color: var(--amber-light); }
 .field input.invalid { border-color: var(--danger); }
@@ -55,7 +55,7 @@
 .pw-meter span { display: block; height: 100%; width: 0%; background: var(--danger); transition: width 0.3s var(--ease), background 0.3s var(--ease); }
 
 .checkbox-row { display: flex; align-items: flex-start; gap: var(--sp-3); font-size: var(--fs-sm); color: var(--ivory-dim); cursor: pointer; }
-.checkbox-row input { margin-top: 3px; accent-color: var(--amber-light); width: 16px; height: 16px; }
+.checkbox-row input { margin-top: 3px; accent-color: var(--amber-light); width: 16px; height: 16px; flex-shrink: 0; }
 .checkbox-row a { color: var(--amber-light); }
 .checkbox-row a:hover { text-decoration: underline; }
 .checkbox-row-tight { margin-bottom: 0; }

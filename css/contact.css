@@ -183,7 +183,7 @@
 .form-check label a:hover { text-decoration: underline; }
 
 /* Submit */
-.btn-full { width: 100%; justify-content: center; }
+.btn-full { display: flex; width: 100%; justify-content: center; align-items: center; }
 
 /* Success state */
 .form-success {

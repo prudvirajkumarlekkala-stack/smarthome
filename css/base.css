@@ -107,7 +107,7 @@ p { margin: 0; }
   color: var(--ivory);
 }
 .btn-ghost:hover { border-color: var(--amber-light); color: var(--amber-light); }
-.btn-block { width: 100%; }
+.btn-block { width: 100%; justify-content: center; }
 .btn-lg { padding: 1rem 2rem; font-size: var(--fs-base); }
 
 /* ---- Pills / status tags (signature structural device) ---- */
@@ -153,15 +153,16 @@ p { margin: 0; }
   padding: var(--sp-4) 0;
 }
 .brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: var(--sp-3);
   font-family: var(--font-display);
   font-size: var(--fs-md);
   font-weight: 600;
   color: var(--ivory);
+  line-height: 1;
 }
-.brand img { width: 32px; height: 32px; border-radius: 8px; }
+.brand img { width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0; display: block; }
 .nav-links {
   display: flex;
   align-items: center;

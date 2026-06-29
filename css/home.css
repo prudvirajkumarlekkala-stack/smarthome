@@ -35,7 +35,7 @@
   font-size: var(--fs-md);
   color: var(--ivory-dim);
 }
-.hero-cta { display: flex; gap: var(--sp-4); margin-top: var(--sp-6); flex-wrap: wrap; }
+.hero-cta { display: flex; gap: var(--sp-4); margin-top: var(--sp-6); flex-wrap: wrap; align-items: center; }
 .hero-stats {
   display: flex; gap: var(--sp-7);
   margin-top: var(--sp-8);
