@@ -1,0 +1,80 @@
+/* ===========================================================
+   AUTH PAGES (signup / login)
+   =========================================================== */
+.auth-body { min-height: 100vh; display: flex; flex-direction: column; }
+.auth-header { position: static; background: var(--navy); }
+.auth-header .nav { justify-content: space-between; }
+
+.auth-main { flex: 1; }
+.auth-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 73px);
+}
+.auth-grid-reverse { direction: rtl; }
+.auth-grid-reverse > * { direction: ltr; }
+
+.auth-art { position: relative; overflow: hidden; background: var(--navy-2); }
+.auth-art img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+.auth-art-text {
+  position: relative; z-index: 1;
+  height: 100%;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: var(--sp-8);
+  background: linear-gradient(180deg, transparent 40%, rgba(14,20,32,0.92) 100%);
+}
+.auth-art-text p { color: var(--ivory); font-size: var(--fs-lg); font-family: var(--font-display); max-width: 380px; margin-top: var(--sp-4); line-height: 1.4; }
+
+.auth-form-wrap { display: flex; align-items: center; justify-content: center; padding: var(--sp-7) var(--sp-6); }
+.auth-form-inner { width: 100%; max-width: 420px; }
+.auth-form-inner h1 { font-size: var(--fs-2xl); }
+.auth-sub { color: var(--ivory-dim); margin-top: var(--sp-3); margin-bottom: var(--sp-7); font-size: var(--fs-sm); }
+
+.field { margin-bottom: var(--sp-5); display: flex; flex-direction: column; }
+.field label { font-size: var(--fs-sm); margin-bottom: var(--sp-2); color: var(--ivory-dim); }
+.field input {
+  background: var(--panel); border: 1px solid var(--line); color: var(--ivory);
+  border-radius: var(--radius-sm); padding: 0.8rem 1rem; font-size: var(--fs-base); font-family: var(--font-body);
+  width: 100%;
+}
+.field input:focus { outline: none; border-color: var(--amber-light); }
+.field input.invalid { border-color: var(--danger); }
+.field-hint { font-size: var(--fs-xs); color: var(--slate); margin-top: var(--sp-2); }
+.field-error { font-size: var(--fs-xs); color: var(--danger); margin-top: var(--sp-2); min-height: 1em; display: block; }
+
+.password-row { position: relative; display: flex; }
+.password-row input { padding-right: 3.6rem; }
+.pw-toggle {
+  position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; color: var(--ivory-dim); font-size: var(--fs-xs);
+  font-family: var(--font-mono); padding: 0.4rem 0.6rem; border-radius: 6px;
+}
+.pw-toggle:hover { color: var(--amber-light); }
+
+.pw-meter { height: 4px; border-radius: 4px; background: var(--line); margin-top: var(--sp-3); overflow: hidden; }
+.pw-meter span { display: block; height: 100%; width: 0%; background: var(--danger); transition: width 0.3s var(--ease), background 0.3s var(--ease); }
+
+.checkbox-row { display: flex; align-items: flex-start; gap: var(--sp-3); font-size: var(--fs-sm); color: var(--ivory-dim); cursor: pointer; }
+.checkbox-row input { margin-top: 3px; accent-color: var(--amber-light); width: 16px; height: 16px; }
+.checkbox-row a { color: var(--amber-light); }
+.checkbox-row a:hover { text-decoration: underline; }
+.checkbox-row-tight { margin-bottom: 0; }
+
+.login-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--sp-6); flex-wrap: wrap; gap: var(--sp-3); }
+.forgot-link { font-size: var(--fs-sm); color: var(--ivory-dim); }
+.forgot-link:hover { color: var(--amber-light); }
+
+.btn-block.btn-lg { margin-top: var(--sp-3); }
+.form-status { margin-top: var(--sp-4); font-size: var(--fs-sm); min-height: 1.2em; }
+.form-status.success { color: var(--sage); }
+.form-status.error { color: var(--danger); }
+
+.auth-switch { margin-top: var(--sp-6); text-align: center; font-size: var(--fs-sm); color: var(--ivory-dim); }
+.auth-switch a { color: var(--amber-light); }
+.auth-switch a:hover { text-decoration: underline; }
+
+@media (max-width: 900px) {
+  .auth-grid, .auth-grid-reverse { grid-template-columns: 1fr; direction: ltr; }
+  .auth-art { min-height: 220px; }
+  .auth-art-text { padding: var(--sp-6); }
+}

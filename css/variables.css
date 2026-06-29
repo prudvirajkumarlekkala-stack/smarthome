@@ -1,0 +1,56 @@
+/* ===========================================================
+   DESIGN TOKENS — Stackly Smart Home Smart Home
+   Palette: deep midnight navy + warm amber-copper glow + sage
+   =========================================================== */
+:root {
+  /* color */
+  --navy:        #0E1420;
+  --navy-2:      #141C2C;
+  --panel:       #1B2333;
+  --panel-light: #232C40;
+  --line:        #2C3650;
+  --ivory:       #F1EFE9;
+  --ivory-dim:   #C9C6BD;
+  --amber:       #D98E4A;
+  --amber-light: #F0B478;
+  --amber-dark:  #A8651F;
+  --sage:        #8FAE96;
+  --sage-dark:   #5F7C66;
+  --slate:       #5C6B7A;
+  --danger:      #D97A6A;
+
+  /* type */
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "Consolas", monospace;
+
+  /* scale */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.375rem;
+  --fs-xl: 1.875rem;
+  --fs-2xl: 2.5rem;
+  --fs-3xl: 3.5rem;
+  --fs-4xl: 4.75rem;
+
+  /* spacing */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4.5rem;
+  --sp-9: 7rem;
+
+  /* misc */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --container: 1180px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-glow: 0 0 60px rgba(217, 142, 74, 0.18);
+}

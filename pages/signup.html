@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up — Stackly Smart Home</title>
+<meta name="description" content="Create your Stackly Smart Home account to start connecting your home's lighting, climate, locks, and cameras.">
+<link rel="icon" type="image/webp" href="../images/stackly-logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/auth.css">
+</head>
+<body class="auth-body">
+
+<header class="site-header auth-header">
+  <nav class="nav container">
+    <a href="../index.html" class="brand">
+      <img src="../images/stackly-logo.webp" alt="Stackly Smart Home logo" width="32" height="32">
+      Stackly Smart Home
+    </a>
+    <a href="../index.html" class="btn btn-ghost">&larr; Back to site</a>
+  </nav>
+</header>
+
+<main class="auth-main">
+  <div class="auth-grid">
+
+    <section class="auth-art" aria-hidden="true">
+      <img src="../images/auth-signup.webp" alt="" loading="lazy">
+      <div class="auth-art-text">
+        <span class="eyebrow">Step into the panel</span>
+        <p>Most homes have their first room — lighting or a thermostat — connected within twenty minutes of creating an account.</p>
+      </div>
+    </section>
+
+    <section class="auth-form-wrap">
+      <div class="auth-form-inner reveal">
+        <h1>Create your account</h1>
+        <p class="auth-sub">Set up the home in your name first — you can invite the rest of the household after.</p>
+
+        <form id="signup-form" novalidate>
+          <div class="field">
+            <label for="su-name">Full name</label>
+            <input type="text" id="su-name" name="name" autocomplete="name" required minlength="2">
+            <span class="field-error" data-for="su-name"></span>
+          </div>
+
+          <div class="field">
+            <label for="su-email">Email address</label>
+            <input type="email" id="su-email" name="email" autocomplete="email" required>
+            <span class="field-error" data-for="su-email"></span>
+          </div>
+
+          <div class="field">
+            <label for="su-password">Password</label>
+            <div class="password-row">
+              <input type="password" id="su-password" name="password" autocomplete="new-password" required minlength="8">
+              <button type="button" class="pw-toggle" data-target="su-password" aria-label="Show password">Show</button>
+            </div>
+            <div class="pw-meter" aria-hidden="true"><span data-strength-bar></span></div>
+            <span class="field-hint">At least 8 characters, with a number.</span>
+            <span class="field-error" data-for="su-password"></span>
+          </div>
+
+          <div class="field">
+            <label for="su-confirm">Confirm password</label>
+            <input type="password" id="su-confirm" name="confirm" autocomplete="new-password" required>
+            <span class="field-error" data-for="su-confirm"></span>
+          </div>
+
+          <label class="checkbox-row">
+            <input type="checkbox" id="su-terms" required>
+            <span>I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</span>
+          </label>
+          <span class="field-error" data-for="su-terms"></span>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg">Create account</button>
+          <p class="form-status" id="signup-status" role="status"></p>
+        </form>
+
+        <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<script src="../js/main.js"></script>
+<script src="../js/auth.js"></script>
+</body>
+</html>

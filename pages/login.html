@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In — Stackly Smart Home</title>
+<meta name="description" content="Log in to your Stackly Smart Home account to control your home's lighting, climate, locks, and cameras.">
+<link rel="icon" type="image/webp" href="../images/stackly-logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/auth.css">
+</head>
+<body class="auth-body">
+
+<header class="site-header auth-header">
+  <nav class="nav container">
+    <a href="../index.html" class="brand">
+      <img src="../images/stackly-logo.webp" alt="Stackly Smart Home logo" width="32" height="32">
+      Stackly Smart Home
+    </a>
+    <a href="../index.html" class="btn btn-ghost">&larr; Back to site</a>
+  </nav>
+</header>
+
+<main class="auth-main">
+  <div class="auth-grid auth-grid-reverse">
+
+    <section class="auth-form-wrap">
+      <div class="auth-form-inner reveal">
+        <h1>Welcome back</h1>
+        <p class="auth-sub">Log in to check in on your rooms, or adjust anything before you walk in the door.</p>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <label for="li-email">Email address</label>
+            <input type="email" id="li-email" name="email" autocomplete="email" required>
+            <span class="field-error" data-for="li-email"></span>
+          </div>
+
+          <div class="field">
+            <label for="li-password">Password</label>
+            <div class="password-row">
+              <input type="password" id="li-password" name="password" autocomplete="current-password" required>
+              <button type="button" class="pw-toggle" data-target="li-password" aria-label="Show password">Show</button>
+            </div>
+            <span class="field-error" data-for="li-password"></span>
+          </div>
+
+          <div class="login-row">
+            <label class="checkbox-row checkbox-row-tight">
+              <input type="checkbox" id="li-remember">
+              <span>Remember this device</span>
+            </label>
+            <a href="#" class="forgot-link">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg">Log in</button>
+          <p class="form-status" id="login-status" role="status"></p>
+        </form>
+
+        <p class="auth-switch">New to Stackly Smart Home? <a href="signup.html">Create an account</a></p>
+      </div>
+    </section>
+
+    <section class="auth-art" aria-hidden="true">
+      <img src="../images/auth-login.webp" alt="" loading="lazy">
+      <div class="auth-art-text">
+        <span class="eyebrow">All rooms, one screen</span>
+        <p>Your dashboard remembers where you left things — same scenes, same schedule, every time you log in.</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<script src="../js/main.js"></script>
+<script src="../js/auth.js"></script>
+</body>
+</html>
