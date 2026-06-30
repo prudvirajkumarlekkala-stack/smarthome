@@ -41,6 +41,10 @@
 .comp-row span:first-child { color: var(--ivory); font-weight: 500; }
 .comp-row .yes { color: var(--sage); }
 .comp-row .no { color: var(--slate); }
+@media (max-width: 1024px) {
+  .comp-row span { padding: var(--sp-4); }
+  .testimonial-grid { grid-template-columns: 1fr 1fr; }
+}
 @media (max-width: 700px) {
   .comp-row { grid-template-columns: 1fr; }
   .comp-row span { padding: var(--sp-3) var(--sp-5); }
@@ -61,3 +65,9 @@
 .t-name { font-size: var(--fs-sm); color: var(--ivory); font-weight: 600; }
 .t-role { font-size: var(--fs-xs); color: var(--slate); margin-top: 2px; }
 @media (max-width: 900px) { .testimonial-grid { grid-template-columns: 1fr; } }
+
+@media (max-width: 480px) {
+  .pillar,
+  .testimonial-card { padding: var(--sp-5); }
+  .testimonial-card blockquote { font-size: var(--fs-base); }
+}
