@@ -24,10 +24,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+img { max-width: 100%; display: block; height: auto; }
 a { color: inherit; text-decoration: none; }
 ul { margin: 0; padding: 0; list-style: none; }
-button { font-family: inherit; cursor: pointer; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
 h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; line-height: 1.12; font-weight: 600; }
 p { margin: 0; }
 
@@ -80,6 +81,23 @@ p { margin: 0; }
   font-size: var(--fs-md);
 }
 
+.page-head {
+  padding: var(--sp-8) 0 var(--sp-6);
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--navy-2), var(--navy));
+}
+.page-head h1 {
+  font-size: clamp(2.2rem, 5vw, var(--fs-3xl));
+  margin-top: var(--sp-3);
+  max-width: 600px;
+}
+.page-head p {
+  margin-top: var(--sp-4);
+  color: var(--ivory-dim);
+  max-width: 480px;
+  font-size: var(--fs-md);
+}
+
 /* ---- Buttons ---- */
 .btn {
   display: inline-flex;
@@ -94,6 +112,8 @@ p { margin: 0; }
   border: 1px solid transparent;
   transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), background 0.25s var(--ease), border-color .25s var(--ease);
   white-space: nowrap;
+  min-height: 44px;
+  text-align: center;
 }
 .btn-primary {
   background: linear-gradient(180deg, var(--amber-light), var(--amber));
@@ -108,7 +128,7 @@ p { margin: 0; }
 }
 .btn-ghost:hover { border-color: var(--amber-light); color: var(--amber-light); }
 .btn-block { width: 100%; }
-.btn-lg { padding: 1rem 2rem; font-size: var(--fs-base); }
+.btn-lg { padding: 1rem 2rem; font-size: var(--fs-base); min-height: 48px; }
 
 /* ---- Pills / status tags (signature structural device) ---- */
 .pill {
@@ -160,6 +180,7 @@ p { margin: 0; }
   font-size: var(--fs-md);
   font-weight: 600;
   color: var(--ivory);
+  line-height: 1.1;
 }
 .brand img { width: 32px; height: 32px; border-radius: 8px; }
 .nav-links {
@@ -171,7 +192,7 @@ p { margin: 0; }
 .nav-links a {
   color: var(--ivory-dim);
   position: relative;
-  padding: var(--sp-1) 0;
+  padding: var(--sp-2) 0;
   transition: color 0.2s var(--ease);
 }
 .nav-links a:hover, .nav-links a[aria-current="page"] { color: var(--ivory); }
@@ -185,17 +206,24 @@ p { margin: 0; }
 .nav-toggle {
   display: none;
   background: none; border: 1px solid var(--line); border-radius: 8px;
-  width: 42px; height: 42px; color: var(--ivory);
+  width: 44px; height: 44px; color: var(--ivory);
   align-items: center; justify-content: center;
 }
 
+@media (max-width: 1024px) {
+  .container { padding: 0 var(--sp-5); }
+  .nav-links { gap: var(--sp-5); }
+  .footer-grid { gap: var(--sp-6); }
+}
+
 @media (max-width: 900px) {
-  .nav-links { position: fixed; top: 64px; right: 0; bottom: 0; left: 0; background: var(--navy-2);
-    flex-direction: column; justify-content: flex-start; padding: var(--sp-7) var(--sp-6); gap: var(--sp-5);
+  .nav-links { position: fixed; top: 72px; right: 0; bottom: 0; left: 0; background: var(--navy-2);
+    flex-direction: column; justify-content: flex-start; align-items: stretch; padding: var(--sp-6) var(--sp-5) var(--sp-7); gap: var(--sp-4);
     transform: translateY(-110%); transition: transform 0.35s var(--ease); border-top: 1px solid var(--line);
+    overflow-y: auto;
   }
   .nav-links.open { transform: translateY(0); }
-  .nav-links a { font-size: var(--fs-lg); }
+  .nav-links a { display: block; width: 100%; font-size: var(--fs-lg); padding: 0.8rem 0; }
   .nav-toggle { display: flex; }
   .nav-actions .btn-ghost { display: none; }
 }
@@ -236,8 +264,21 @@ p { margin: 0; }
   font-size: var(--fs-xs); color: var(--slate);
   font-family: var(--font-mono);
 }
-@media (max-width: 800px) {
+@media (max-width: 960px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .container { padding: 0 var(--sp-4); }
+  .nav { padding: var(--sp-3) 0; }
+  .brand { font-size: var(--fs-base); gap: var(--sp-2); }
+  .nav-actions { gap: var(--sp-2); }
+  .nav-actions .btn-primary { padding-inline: 1.2rem; }
+  .nav-links { top: 68px; padding: var(--sp-6) var(--sp-4) var(--sp-7); }
+  .section-head { margin-bottom: var(--sp-6); }
+  .section-head p { font-size: var(--fs-base); }
+  .page-head { padding: var(--sp-7) 0 var(--sp-5); }
+  .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: var(--sp-3); align-items: flex-start; }
 }
 
