@@ -1,0 +1,270 @@
+/* ===========================================================
+   ANIMATIONS & TRANSITIONS
+   =========================================================== */
+
+/* ---- Fade-in animations ---- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---- Floating animations ---- */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+/* ---- Glow animations ---- */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(217, 142, 74, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(217, 142, 74, 0.6);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(217, 142, 74, 0.2), inset 0 0 20px rgba(217, 142, 74, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(217, 142, 74, 0.5), inset 0 0 20px rgba(217, 142, 74, 0.2);
+  }
+}
+
+/* ---- Scale animations ---- */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ---- Shimmer animation ---- */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* ---- Pulse animation ---- */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* ---- Rotate animation ---- */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---- Color shift animation ---- */
+@keyframes colorShift {
+  0% {
+    color: var(--amber-light);
+  }
+  50% {
+    color: var(--sage);
+  }
+  100% {
+    color: var(--amber-light);
+  }
+}
+
+/* ---- Apply animations to elements ---- */
+.reveal {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-title {
+  animation: fadeInDown 0.9s ease-out 0.2s both;
+}
+
+.hero-sub {
+  animation: fadeInUp 0.9s ease-out 0.4s both;
+}
+
+.hero-cta {
+  animation: fadeInUp 0.9s ease-out 0.6s both;
+}
+
+.hero-stats {
+  animation: fadeInUp 0.9s ease-out 0.8s both;
+}
+
+.hero-bg {
+  animation: scaleIn 1.2s ease-out;
+}
+
+.feature-card {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.feature-card:hover {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+.teaser-item {
+  animation: fadeInUp 0.8s ease-out;
+  position: relative;
+}
+
+.teaser-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(217, 142, 74, 0.1), transparent);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.teaser-item:hover::after {
+  opacity: 1;
+}
+
+.accent-text {
+  animation: colorShift 3s ease-in-out infinite;
+}
+
+/* ---- Stagger animation delays ---- */
+.strip-line {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.strip-line:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.strip-line:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+/* ---- Feature cards stagger ---- */
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* ---- Teaser items stagger ---- */
+.teaser-item:nth-child(1) { animation-delay: 0.1s; }
+.teaser-item:nth-child(2) { animation-delay: 0.2s; }
+.teaser-item:nth-child(3) { animation-delay: 0.3s; }
+.teaser-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* ---- Why list items stagger ---- */
+.why-list li {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.why-list li:nth-child(1) { animation-delay: 0.1s; }
+.why-list li:nth-child(2) { animation-delay: 0.2s; }
+.why-list li:nth-child(3) { animation-delay: 0.3s; }
+
+/* ---- Hero stat pulse ---- */
+.hero-stat-num {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ---- CTA band floating ---- */
+.cta-band {
+  animation: floatSlow 4s ease-in-out infinite;
+}
