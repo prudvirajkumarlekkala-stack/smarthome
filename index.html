@@ -8,10 +8,12 @@
 <link rel="icon" type="image/webp" href="images/stackly-logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swa[...]
 <link rel="stylesheet" href="css/variables.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/theme.css">
 </head>
 <body>
 
@@ -44,6 +46,7 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="hero-bg" style="background-image:url('images/hero-room.webp')"></div>
+    <div class="hero-overlay"></div>
     <div class="hero-scrim"></div>
     <div class="container hero-inner">
       <span class="eyebrow">System status — all rooms connected</span>
@@ -83,7 +86,7 @@
       <div class="feature-grid">
         <article class="feature-card reveal">
           <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="17" r="11" stroke="currentColor" stroke-width="1.6"/><path d="M14 33h12M16 29h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M20 6V3M9 9l-2-2M31 9l2-2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="17" r="11" stroke="currentColor" stroke-width="1.6"/><path d="M14 33h12M16 29h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           </div>
           <h3>Lighting</h3>
           <p>Scenes that shift with the hour — warm at dusk, bright for focus, dark for film night. Set once, forget it.</p>
@@ -91,7 +94,7 @@
 
         <article class="feature-card reveal">
           <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="1.6"/><path d="M20 20V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="20" cy="20" r="2.4" fill="currentColor"/></svg>
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="1.6"/><path d="M20 20V11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M26 26a6 6 0 1 1-12 0" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <h3>Climate</h3>
           <p>Learns your routine in about two weeks, then keeps every room at the temperature you'd have picked yourself.</p>
@@ -99,7 +102,7 @@
 
         <article class="feature-card reveal">
           <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none"><rect x="10" y="18" width="20" height="15" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M14 18v-3a6 6 0 0 1 12 0v3" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="25" r="1.8" fill="currentColor"/></svg>
+            <svg viewBox="0 0 40 40" fill="none"><rect x="10" y="18" width="20" height="15" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M14 18v-3a6 6 0 0 1 12 0v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <h3>Locks &amp; entry</h3>
           <p>Keyless doors, one-tap guest codes, and a log of who came and went — without a key under the mat.</p>
@@ -107,7 +110,7 @@
 
         <article class="feature-card reveal">
           <div class="feature-icon" aria-hidden="true">
-            <svg viewBox="0 0 40 40" fill="none"><rect x="6" y="11" width="28" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="20" r="2" fill="currentColor"/></svg>
+            <svg viewBox="0 0 40 40" fill="none"><rect x="6" y="11" width="28" height="18" rx="4" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="20" r="6" stroke="currentColor" stroke-width="1.6"/></svg>
           </div>
           <h3>Cameras</h3>
           <p>Clips only when something actually moves, sorted by room, never by a hundred false alerts a day.</p>
