@@ -1,0 +1,309 @@
+/* ===========================================================
+   ENHANCED COLOR THEMES & VISUAL IMPROVEMENTS
+   =========================================================== */
+
+/* ---- Enhanced Color Palette ---- */
+:root {
+  /* Warm accent enhancements */
+  --amber-glow: rgba(217, 142, 74, 0.4);
+  --amber-dark-glow: rgba(171, 101, 30, 0.3);
+  
+  /* Cool accent enhancements */
+  --sage-glow: rgba(143, 174, 150, 0.3);
+  --sage-light-glow: rgba(174, 200, 188, 0.2);
+  
+  /* Purple accent enhancements */
+  --purple: #a584b8;
+  --purple-glow: rgba(165, 132, 184, 0.25);
+  
+  /* Enhanced gradients */
+  --gradient-warm: linear-gradient(135deg, var(--amber-light), var(--amber-dark));
+  --gradient-cool: linear-gradient(135deg, var(--sage), var(--sage-light));
+  --gradient-mixed: linear-gradient(135deg, var(--amber-light) 0%, var(--sage) 100%);
+  --gradient-vibrant: linear-gradient(135deg, #d98e4a 0%, #8fae96 50%, #a584b8 100%);
+}
+
+/* ---- Enhanced Buttons ---- */
+.btn-primary {
+  background: var(--gradient-warm);
+  box-shadow: 0 8px 24px var(--amber-glow);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 12px 32px var(--amber-glow), inset 0 -2px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  box-shadow: 0 4px 12px var(--amber-glow);
+  transform: translateY(0);
+}
+
+.btn-ghost {
+  border-color: var(--amber-light);
+  color: var(--amber-light);
+  transition: all 0.3s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(217, 142, 74, 0.1);
+  border-color: var(--amber-dark);
+  color: var(--amber-dark);
+  box-shadow: 0 0 20px rgba(217, 142, 74, 0.2);
+}
+
+/* ---- Feature Cards Enhancements ---- */
+.feature-card {
+  background: linear-gradient(135deg, rgba(30, 45, 60, 0.6), rgba(35, 50, 65, 0.4));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(217, 142, 74, 0.2);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.feature-card:hover {
+  background: linear-gradient(135deg, rgba(217, 142, 74, 0.1), rgba(143, 174, 150, 0.05));
+  border-color: var(--amber-light);
+  box-shadow: 0 20px 40px rgba(217, 142, 74, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  transform: translateY(-8px) scale(1.02);
+}
+
+.feature-icon {
+  background: linear-gradient(135deg, rgba(217, 142, 74, 0.15), rgba(217, 142, 74, 0.05));
+  border: 1px solid rgba(217, 142, 74, 0.3);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  background: linear-gradient(135deg, rgba(217, 142, 74, 0.25), rgba(217, 142, 74, 0.15));
+  box-shadow: 0 0 20px var(--amber-glow);
+}
+
+/* ---- Teaser Items Enhancements ---- */
+.teaser-item {
+  position: relative;
+  background: linear-gradient(135deg, var(--navy-2), var(--panel));
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+}
+
+.teaser-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(217, 142, 74, 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.teaser-item:hover::before {
+  opacity: 1;
+}
+
+.teaser-item img {
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.5s ease;
+  filter: brightness(1) saturate(1);
+}
+
+.teaser-item:hover img {
+  transform: scale(1.08) rotate(1deg);
+  filter: brightness(1.1) saturate(1.15);
+}
+
+.teaser-label {
+  background: linear-gradient(135deg, rgba(217, 142, 74, 0.8), rgba(165, 132, 184, 0.6));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--ivory);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.teaser-item:hover .teaser-label {
+  background: linear-gradient(135deg, var(--amber-light), var(--sage-light));
+  color: var(--navy);
+  box-shadow: 0 8px 24px rgba(217, 142, 74, 0.3);
+}
+
+/* ---- CTA Band Enhancements ---- */
+.cta-band {
+  background: linear-gradient(135deg, rgba(217, 142, 74, 0.1), rgba(143, 174, 150, 0.08));
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-band::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(217, 142, 74, 0.15), rgba(143, 174, 150, 0.1), rgba(165, 132, 184, 0.08));
+  z-index: -1;
+  border-radius: var(--radius-lg);
+}
+
+.cta-band::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, var(--amber-light), var(--sage), var(--purple));
+  border-radius: var(--radius-lg);
+  z-index: -2;
+  opacity: 0.3;
+}
+
+.cta-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-band h2 {
+  background: var(--gradient-vibrant);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- Section Enhancements ---- */
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(217, 142, 74, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 50%, rgba(143, 174, 150, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---- Hero Section Theme ---- */
+.hero {
+  background: linear-gradient(135deg, #0e1420 0%, #1a2332 100%);
+}
+
+.hero-title {
+  background: var(--gradient-vibrant);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* ---- Strip Section ---- */
+.strip {
+  background: linear-gradient(135deg, rgba(20, 30, 45, 0.8), rgba(25, 35, 50, 0.6));
+  border-top: 1px solid rgba(217, 142, 74, 0.2);
+  border-bottom: 1px solid rgba(217, 142, 74, 0.2);
+}
+
+.pill {
+  background: rgba(217, 142, 74, 0.15);
+  border: 1px solid rgba(217, 142, 74, 0.3);
+  color: var(--amber-light);
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.pill:hover {
+  background: rgba(217, 142, 74, 0.25);
+  box-shadow: 0 0 15px var(--amber-glow);
+}
+
+.pill.amber {
+  background: rgba(143, 174, 150, 0.15);
+  border-color: rgba(143, 174, 150, 0.3);
+  color: var(--sage-light);
+}
+
+.pill.amber:hover {
+  background: rgba(143, 174, 150, 0.25);
+  box-shadow: 0 0 15px var(--sage-glow);
+}
+
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  margin-right: 6px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ---- Why List Items ---- */
+.why-list li {
+  background: linear-gradient(135deg, rgba(217, 142, 74, 0.05), transparent);
+  border-left: 3px solid var(--amber-light);
+  padding: var(--sp-4);
+  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+}
+
+.why-list li:hover {
+  background: linear-gradient(135deg, rgba(217, 142, 74, 0.1), rgba(143, 174, 150, 0.05));
+  border-left-color: var(--sage-light);
+  box-shadow: 0 8px 24px rgba(217, 142, 74, 0.1);
+  transform: translateX(8px);
+}
+
+.why-num {
+  font-size: 2rem;
+  font-weight: 700;
+  background: var(--gradient-warm);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- Link Hover Effects ---- */
+a {
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--amber-light);
+}
+
+/* ---- Responsive Adjustments ---- */
+@media (max-width: 1000px) {
+  .feature-card:hover {
+    transform: translateY(-6px) scale(1.01);
+  }
+  
+  .teaser-item:hover img {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 640px) {
+  .cta-band h2 {
+    font-size: var(--fs-xl);
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+}
